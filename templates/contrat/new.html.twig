@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau contrat{% endblock %}
+
+{% block body %}
+    <h1>Créer un nouveau contrat</h1>
+
+    {{ include('contrat/_form.html.twig') }}
+
+    <a href="{{ path('contrat_index') }}">Retour à la consultation</a>
+{% endblock %}

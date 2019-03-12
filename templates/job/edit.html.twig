@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier un job{% endblock %}
+
+{% block body %}
+    <h1>Modifier une job</h1>
+
+    {{ include('job/_form.html.twig') }}
+
+    <a href="{{ path('job_index') }}">Retour à la consultation</a>
+
+    {{ include('job/_delete_form.html.twig') }}
+{% endblock %}

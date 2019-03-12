@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier une competence{% endblock %}
+
+{% block body %}
+    <h1>Modifier une competence</h1>
+
+    {{ include('competence/_form.html.twig') }}
+
+    <a href="{{ path('competence_index') }}">Retour à la consultation</a>
+
+    {{ include('competence/_delete_form.html.twig') }}
+{% endblock %}

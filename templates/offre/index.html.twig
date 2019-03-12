@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Offre{% endblock %}
+
+{% block body %}
+    <h1>Offre</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Titre</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for offre in offres %}
+            <tr>
+                <td>{{ offre.id }}</td>
+                <td>{{ offre.title }}</td>
+                <td>{{ offre.description }}</td>
+                <td>
+                    <a href="{{ path('offre_show', {'id': offre.id}) }}">Visualiser</a>
+                    <a href="{{ path('offre_edit', {'id': offre.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td>Aucun offre</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('offre_new') }}">Créer une offre</a>
+{% endblock %}

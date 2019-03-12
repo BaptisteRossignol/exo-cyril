@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier une offre{% endblock %}
+
+{% block body %}
+    <h1>Modifier une offre</h1>
+
+    {{ include('offre/_form.html.twig') }}
+
+    <a href="{{ path('offre_index') }}">Retour à la consultation</a>
+
+    {{ include('offre/_delete_form.html.twig') }}
+{% endblock %}
